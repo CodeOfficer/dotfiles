@@ -1,0 +1,2 @@
+# load my source controlled bashrc
+source ~/bin/dotfiles/bashrc
