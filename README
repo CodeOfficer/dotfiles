@@ -1,0 +1,23 @@
+# sym link .ssh/config
+ln -s ~/bin/dotfiles/ssh/config ~/.ssh/config 
+
+# sym link .autotest
+ln -s ~/bin/dotfiles/autotest ~/.autotest
+
+# sym link .irbrc
+ln -s ~/bin/dotfiles/irbrc ~/.irbrc
+
+# sym link .railsrc
+ln -s ~/bin/dotfiles/railsrc ~/.railsrc
+
+# edit .bashrc
+source ~/bin/dotfiles/bashrc
+
+# edit .bash_profile
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi
+
+# Shortcuts for Terminal
+# For "control cursor left", "option", "send string to shell", press Escape, then press "b" ... \033b
+# For "control cursor right", "option", "send string to shell", press Escape, then press "f" ... \033f
