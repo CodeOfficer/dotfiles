@@ -8,7 +8,7 @@ require 'pp' # in ruby-debug
 
   module Readline
     module History
-      LOG = "#{ENV['HOME']}/.irb-history"
+      LOG = "~/.irb-history"
 
       def self.write_log(line)
         File.open(LOG, 'ab') {|f| f << "#{line}\n"}
@@ -35,9 +35,9 @@ require 'pp' # in ruby-debug
 
   require 'irb/ext/save-history'
   IRB.conf[:SAVE_HISTORY] = 100
-  IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
+  IRB.conf[:HISTORY_FILE] = "~/.irb-save-history"
 # end take
 
 if ENV['RAILS_ENV']
-  load File.dirname(__FILE__) + '/.railsrc'
+  load File.dirname(__FILE__) + '~/bin/dotfiles/railsrc'
 end

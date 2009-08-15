@@ -17,7 +17,8 @@ export MANPATH=/opt/local/share/man:$MANPATH
 export PATH=/usr/local/mysql/bin:$PATH
 
 #git
-export PATH=/usr/local/git/bin:$PATH
+GIT=/usr/local/git/bin
+export PATH=$GIT:/usr/local/bin:/usr/local/sbin:$PATH
 export MANPATH=/usr/local/git/man:$MANPATH
 
 # postgresql
