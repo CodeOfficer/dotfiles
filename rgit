@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+ 
+if ARGV.empty?
+  STDERR.puts "usage: #{File.basename($0)} <cmd> ..."
+  STDERR.puts "  Runs git <cmd> in every repository found in subdirs"
+  exit
+end
+ 
+dirs = Dir.glob('**/.git').map { |d| d.chomp('/.git') }
+ 
+dirs.each do |dir|
+  puts "-> #{dir}"
+  Dir.chdir(dir) do
+    system 'git', *ARGV
+  end
+end

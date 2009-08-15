@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require "rubygems"
+require "open-uri"
+
+unless ARGV.length.eql?(1)
+	puts "Only one argument is required to run the script, fetch < jq || ui || uicore || 960 >"
+	exit
+end
+
+case ARGV[0]
+  when 'jq'
+    File.open('jquery.js', 'w') do |f|  
+     f.puts open("http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js").read  
+    end 
+    
+  when 'ui'
+    File.open('jquery-ui.js', 'w') do |f|  
+     f.puts open("http://ajax.googleapis.com/ajax/libs/jqueryui/1.7/jquery-ui.min.js").read  
+    end 
+    
+  when 'uicore'
+    File.open('jquery-ui.custom.zip', 'w') do |f|  
+     f.puts open("http://jqueryui.com/download/jquery-ui-1.7.1.custom.zip").read  
+    end 
+        
+  when '960'
+    File.open('reset.css', 'w') do |f|  
+     f.puts open("http://github.com/CodeOfficer/960-grid-system-without-margins/raw/master/code/css/reset.css").read
+    end
+    File.open('960.css', 'w') do |f|  
+     f.puts open("http://github.com/CodeOfficer/960-grid-system-without-margins/raw/master/code/css/960.css").read
+    end 
+    File.open('text.css', 'w') do |f|  
+     f.puts open("http://github.com/CodeOfficer/960-grid-system-without-margins/raw/master/code/css/text.css").read
+    end 
+end
