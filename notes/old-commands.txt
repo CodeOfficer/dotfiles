@@ -1,0 +1,5 @@
+Shortcuts for Terminal
+
+For "control cursor left", "option", "send string to shell", press Escape, then press "b" ... \033b
+
+For "control cursor right", "option", "send string to shell", press Escape, then press "f" ... \033f
