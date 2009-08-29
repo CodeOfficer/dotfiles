@@ -1,0 +1,10 @@
+# Make sure to turn on 'use option as meta key' in OS X 
+# Terminal > Preferences > Settings > Keyboard
+
+# \e 	= escape sequence
+# \033 	= OPTION KEY
+# [C 	= RIGHT ARROW
+# [D 	= LEFT ARROW
+
+"\e\033[C": forward-word
+"\e\033[D": backward-word
