@@ -1,4 +1,8 @@
 source ~/bin/dotfiles/bash/env
 source ~/bin/dotfiles/bash/config
 source ~/bin/dotfiles/bash/aliases
-source ~/bin/dotfiles/bash/paliases
+
+# private aliases, machine specific, etc
+if [ -f ~/bin/dotfiles/bash/paliases ]; then
+  source ~/bin/dotfiles/bash/paliases
+fi
