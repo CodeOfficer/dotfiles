@@ -1,7 +1,24 @@
 require 'rubygems'
 require 'irb/completion'
-require 'what_methods'
+# require 'what_methods'
 require 'pp' # in ruby-debug
+
+# http://gist.github.com/212519
+# pickles fix for ruby 1.8.7 on Snow leopard not loaing ~/.irbrc
+  def IRB.run_config
+    if @CONF[:RC]
+      begin
+        load rc_file
+      rescue LoadError, Errno::ENOENT
+      rescue
+        print "load error: #{rc_file}\n"
+        print $!.class, ": ", $!, "\n"
+        for err in $@[0, $@.size - 2]
+          print "\t", err, "\n"
+        end
+      end
+    end
+  end
 
 # taken from http://blog.nicksieger.com/articles/2006/04/23/tweaking-irb
   ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
@@ -42,19 +59,3 @@ if ENV['RAILS_ENV']
   load File.dirname(__FILE__) + '~/bin/dotfiles/railsrc'
 end
 
-# http://gist.github.com/212519
-# pickles fix for ruby 1.8.7 on Snow leopard not loaing ~/.irbrc
-  def IRB.run_config
-    if @CONF[:RC]
-      begin
-        load rc_file
-      rescue LoadError, Errno::ENOENT
-      rescue
-        print "load error: #{rc_file}\n"
-        print $!.class, ": ", $!, "\n"
-        for err in $@[0, $@.size - 2]
-          print "\t", err, "\n"
-        end
-      end
-    end
-  end
