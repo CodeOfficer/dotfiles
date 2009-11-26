@@ -55,6 +55,7 @@ alias rtfop='rake db:drop RAILS_ENV=production && rake db:create RAILS_ENV=produ
 alias rrm='railroad -o model.dot -M'
 alias rrc='railroad -o controller.dot -C'
 alias rupdate='sudo gem install rails --source=http://gems.rubyonrails.org'
+alias jug='juggernaut -c config/juggernaut.yml'
 railz() { 
 	rails $* -m http://github.com/CodeOfficer/rails-23-templates/raw/master/basic.rb 
 }
