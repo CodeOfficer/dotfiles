@@ -1,59 +1,21 @@
 require 'rubygems'
-require 'irb/completion'
-# require 'what_methods'
-require 'pp' # in ruby-debug
 
-# http://gist.github.com/212519
-# pickles fix for ruby 1.8.7 on Snow leopard not loaing ~/.irbrc
-  def IRB.run_config
-    if @CONF[:RC]
-      begin
-        load rc_file
-      rescue LoadError, Errno::ENOENT
-      rescue
-        print "load error: #{rc_file}\n"
-        print $!.class, ": ", $!, "\n"
-        for err in $@[0, $@.size - 2]
-          print "\t", err, "\n"
-        end
-      end
-    end
-  end
+begin
+  require 'wirble'
+  Wirble.init
+  Wirble.colorize
+rescue LoadError => err
+  warn "Couldn't load Wirble: #{err}"
+  warn "maybe you need to: sudo gem install wirble"
+end
 
-# taken from http://blog.nicksieger.com/articles/2006/04/23/tweaking-irb
-  ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
-
-  module Readline
-    module History
-      LOG = "~/.irb-history"
-
-      def self.write_log(line)
-        File.open(LOG, 'ab') {|f| f << "#{line}\n"}
-      end
-
-      def self.start_session_log
-        write_log("# session start: #{Time.now}")
-        at_exit { write_log("# session stop: #{Time.now}\n") }
-      end
-    end
-
-    alias :old_readline :readline
-    def readline(*args)
-      ln = old_readline(*args)
-      begin
-        History.write_log(ln)
-      rescue
-      end
-      ln
-    end
-  end
-
-  Readline::History.start_session_log
-
-  require 'irb/ext/save-history'
-  IRB.conf[:SAVE_HISTORY] = 100
-  IRB.conf[:HISTORY_FILE] = "~/.irb-save-history"
-# end take
+begin
+  require 'hirb'
+  Hirb.enable
+rescue LoadError => err
+  warn "Couldn't load Hirb: #{err}"
+  warn "maybe you need to: sudo gem install hirb"
+end
 
 if ENV['RAILS_ENV']
   load File.dirname(__FILE__) + '~/bin/dotfiles/railsrc'
