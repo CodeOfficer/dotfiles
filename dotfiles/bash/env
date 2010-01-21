@@ -2,6 +2,10 @@ export EDITOR="mate -w"
 export AUTOFEATURE=true
 export RSPEC=true
 
+# jeweler defaults
+export JEWELER_OPTS="--rspec --gemcutter"
+
+
 # path
 export PATH=.:~/bin:~/local/bin:$PATH # before
 export PATH=/user/local/bin:$PATH

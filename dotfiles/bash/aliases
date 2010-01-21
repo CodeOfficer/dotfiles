@@ -76,8 +76,12 @@ function rffl {
 # git aliases
 alias gb='git branch'
 alias gba='git branch -a'
-alias gc='git commit -v'
-alias gca='git commit -v -a'
+function gc() {
+	git commit -v -m "$*"
+}
+function gca() {
+	git commit -v -a -m "$*"
+}
 alias gd='git diff | mate'
 alias gdc='git diff --cached'
 alias gl='git pull'
@@ -90,6 +94,8 @@ alias glpo='git log --pretty=oneline --abbrev-commit --color'
 alias glgs='git log | git shortlog -n -s'
 alias gweb='git-instaweb -d webrick'
 alias gdel='git ls-files -z --deleted | git update-index -z --remove --stdin'
+
+git commit -v -a -m "$*"
 
 # apache
 alias sag='sudo apachectl graceful'
