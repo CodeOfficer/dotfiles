@@ -21,7 +21,7 @@ clear_sources
 source 'http://gemcutter.org'
 source 'http://gems.github.com'  
 
-disable_system_gems
+# disable_system_gems
 
 bundle_path 'gems'
 
