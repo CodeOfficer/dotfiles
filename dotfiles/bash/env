@@ -37,3 +37,7 @@ export RIPDIR RUBYLIB PATH
 
 # custom Terminal commands for readline 
 export INPUTRC=~/bin/dotfiles/inputrc
+
+#gems
+export GEM_PRIVATE_KEY='~/.gem/gem-private_key.pem'
+export GEM_CERTIFICATE_CHAIN='~/bin/dotfiles/gem/gem-public_cert.pem'
