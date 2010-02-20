@@ -34,6 +34,8 @@ alias startpostgres='/Library/PostgreSQL/8.3/bin/pg_ctl -D /Library/PostgreSQL/8
 alias stoppostgres='/Library/PostgreSQL/8.3/bin/pg_ctl -D /Library/PostgreSQL/8.3/data -l /Library/PostgreSQL/8.3/data/logfile stop'
 
 # rails aliases
+alias r='rails'
+
 alias tld='tail -f log/development.log'
 alias tlt='tail -f log/test.log'
 alias tlp='tail -f log/production.log'
@@ -58,8 +60,8 @@ alias rrc='railroad -o controller.dot -C'
 alias rupdate='sudo gem install rails --source=http://gems.rubyonrails.org'
 alias jug='juggernaut -c config/juggernaut.yml'
 alias	jugg='./vendor/gems/juggernaut-0.5.8/bin/juggernaut -c /Users/codeofficer/work/chat-app/config/juggernaut.yml'
-railz() { 
-	rails $* -m http://github.com/CodeOfficer/rails-23-templates/raw/master/basic.rb 
+railz() {
+	rails $* -m http://github.com/CodeOfficer/rails-23-templates/raw/master/basic.rb
 }
 
 # cucumber
@@ -101,9 +103,9 @@ alias sph='sudo mate /opt/local/apache2/conf/httpd.conf'
 alias spv='sudo mate /opt/local/apache2/conf/extra/httpd-vhosts.conf'
 
 # memcached
-alias mcconf="mate /opt/local/etc/LaunchDaemons/org.macports.memcached/memcached.wrapper" 
-alias stopmc="sudo launchctl stop org.macports.memcached" 
-alias startmc="sudo launchctl start org.macports.memcached" 
+alias mcconf="mate /opt/local/etc/LaunchDaemons/org.macports.memcached/memcached.wrapper"
+alias stopmc="sudo launchctl stop org.macports.memcached"
+alias startmc="sudo launchctl start org.macports.memcached"
 alias mcr="stopmc ; startmc"
 
 
