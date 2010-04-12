@@ -29,7 +29,7 @@ export PATH=$GIT:/usr/local/bin:/usr/local/sbin:$PATH
 export MANPATH=/usr/local/git/man:$MANPATH
 
 # postgresql
-export PATH=/Library/PostgreSQL/8.3/bin:$PATH
+export PATH=/Library/PostgreSQL/8.4/bin:$PATH
 
 # -- start rip config -- #
 RIPDIR=/Users/codeofficer/.rip
