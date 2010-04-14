@@ -30,8 +30,8 @@ alias doff='defaults write com.apple.finder CreateDesktop false; killall Finder'
 cd() { builtin cd "$1"; ll; }
 
 # postgres
-alias startpostgres='/Library/PostgreSQL/8.4/bin/pg_ctl -D /Library/PostgreSQL/8.4/data -l /Library/PostgreSQL/8.4/data/logfile start'
-alias stoppostgres='/Library/PostgreSQL/8.4/bin/pg_ctl -D /Library/PostgreSQL/8.4/data -l /Library/PostgreSQL/8.4/data/logfile stop'
+alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias stoppostgres='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 # rails aliases
 alias r='rails'
