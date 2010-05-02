@@ -18,6 +18,6 @@ rescue LoadError => err
 end
 
 if $0 == 'irb' && ENV['RAILS_ENV']
-  load '~/bin/dotfiles/railsrc'
+  load '~/dotfiles/railsrc'
 end
 

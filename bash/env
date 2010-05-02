@@ -2,20 +2,18 @@ export EDITOR="mate -w"
 
 # path
 export PATH=.:$PATH
-export PATH=~/bin:$PATH
-export PATH=~/local/bin:$PATH
+export PATH=~/dotfiles/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
 # man
-export MANPATH=~/local/man:$MANPATH
 export MANPATH=/usr/local/man:$MANPATH
 
 # mysql
 export PATH=/usr/local/mysql/bin:$PATH
 
 # custom Terminal commands for readline
-export INPUTRC=~/bin/dotfiles/inputrc
+export INPUTRC=~/dotfiles/inputrc
 
-#gems
-export GEM_PRIVATE_KEY='~/.gem/gem-private_key.pem'
-export GEM_CERTIFICATE_CHAIN='~/bin/dotfiles/gem/gem-public_cert.pem'
+# gems
+# export GEM_PRIVATE_KEY='~/.gem/gem-private_key.pem'
+# export GEM_CERTIFICATE_CHAIN='~/dotfiles/gem/gem-public_cert.pem'

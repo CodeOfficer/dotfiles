@@ -1,13 +1,13 @@
-source ~/bin/dotfiles/bash/env
-source ~/bin/dotfiles/bash/config
-source ~/bin/dotfiles/bash/aliases
+source ~/dotfiles/bash/env
+source ~/dotfiles/bash/config
+source ~/dotfiles/bash/aliases
 
 # private aliases, machine specific, etc
-if [ -f ~/bin/dotfiles/bash/paliases ]; then
-  source ~/bin/dotfiles/bash/paliases;
+if [ -f ~/dotfiles/bash/paliases ]; then
+  source ~/dotfiles/bash/paliases;
 fi
 
-source ~/bin/dotfiles/git-completion
+source ~/dotfiles/git-completion
 
 if [[ -s /Users/codeofficer/.rvm/scripts/rvm ]]; then 
 	source /Users/codeofficer/.rvm/scripts/rvm; 

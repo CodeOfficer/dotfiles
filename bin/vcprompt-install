@@ -5,8 +5,8 @@
 # AUTHOR: Geoffrey Grosenbach
 #         July 27 2009
 
-mkdir -p ~/tmp/src
-cd ~/tmp/src
+mkdir -p ~/src
+cd ~/src
 hg clone http://vc.gerg.ca/hg/vcprompt/
 cd vcprompt
 make
