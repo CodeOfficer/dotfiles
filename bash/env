@@ -4,6 +4,7 @@ export EDITOR="mate -w"
 export PATH=.:$PATH
 export PATH=~/dotfiles/bin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 
 # man
 export MANPATH=/usr/local/man:$MANPATH
