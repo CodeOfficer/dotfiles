@@ -28,6 +28,8 @@ alias ram_disk='diskutil erasevolume HFS+ "ram disk" `hdiutil attach -nomount ra
 alias don='defaults write com.apple.finder CreateDesktop true; killall Finder'
 alias doff='defaults write com.apple.finder CreateDesktop false; killall Finder'
 cd() { builtin cd "$1"; ll; }
+pman() { man -t "${1}" | open -f -a /Applications/Preview.app; }
+
 
 # postgres
 alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
