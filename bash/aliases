@@ -31,10 +31,22 @@ alias doff='defaults write com.apple.finder CreateDesktop false; killall Finder'
 cd() { builtin cd "$1"; ll; }
 pman() { man -t "${1}" | open -f -a /Applications/Preview.app; }
 
+# OPEN MULTIPLE NEW TERMINAL TABS ON OSX USING THE CURRENT WORKING DIR
+# http://snipplr.com/view/36763/open-multiple-new-terminal-tabs-on-osx-using-the-current-working-dir/
+function nt {
+	if [ $# -ne 1 ]; then
+		TIMES=1
+	else
+		TIMES=$1
+	fi
 
-# postgres
-alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias stoppostgres='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+	osascript -e "
+		repeat $TIMES times
+			tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
+			tell application \"Terminal\" to do script \"cd $PWD; clear;\" in selected tab of the front window
+		end repeat
+	" > /dev/null 2>&1
+}
 
 # rails aliases
 alias r='rails'
@@ -63,7 +75,7 @@ alias rrm='railroad -o model.dot -M'
 alias rrc='railroad -o controller.dot -C'
 alias rupdate='sudo gem install rails --source=http://gems.rubyonrails.org'
 alias jug='juggernaut -c config/juggernaut.yml'
-alias	jugg='./vendor/gems/juggernaut-0.5.8/bin/juggernaut -c /Users/codeofficer/work/chat-app/config/juggernaut.yml'
+alias jugg='./vendor/gems/juggernaut-0.5.8/bin/juggernaut -c /Users/codeofficer/work/chat-app/config/juggernaut.yml'
 railz() {
 	rails $* -m http://github.com/CodeOfficer/rails-23-templates/raw/master/basic.rb
 }
@@ -71,12 +83,12 @@ railz() {
 # cucumber
 alias rf='rake features'
 function rff {
-  # For running specific features.
-  rake features FEATURE=features/"$1".feature
+	# For running specific features.
+	rake features FEATURE=features/"$1".feature
 }
 function rffl {
-  # For running specific line numbers
-  cucumber features/"$1".feature:"$2"
+	# For running specific line numbers
+	cucumber features/"$1".feature:"$2"
 }
 
 # git aliases
