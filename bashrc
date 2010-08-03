@@ -11,7 +11,9 @@ source ~/dotfiles/git-completion
 
 if [[ -s /Users/codeofficer/.rvm/scripts/rvm ]]; then 
 	source /Users/codeofficer/.rvm/scripts/rvm; 
+	[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 fi
+
 
 if [[ -s `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]]; then 
 	source `brew --prefix`/Library/Contributions/brew_bash_completion.sh;
