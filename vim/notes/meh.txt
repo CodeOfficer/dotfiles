@@ -1,0 +1,1 @@
+peepopen, rooter, ack, nerd-tree, bufexplorer, rails, surround
