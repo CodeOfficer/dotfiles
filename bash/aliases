@@ -51,6 +51,7 @@ function nt {
 # rails aliases
 alias r='rails'
 
+alias ur='unicorn_rails'
 alias tld='tail -f log/development.log'
 alias tlt='tail -f log/test.log'
 alias tlp='tail -f log/production.log'
