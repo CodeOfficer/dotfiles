@@ -121,6 +121,8 @@ alias sag='sudo apachectl graceful'
 alias sph='sudo mate /opt/local/apache2/conf/httpd.conf'
 alias spv='sudo mate /opt/local/apache2/conf/extra/httpd-vhosts.conf'
 
+alias sm="mongod run --config /usr/local/Cellar/mongodb/1.6.2-x86_64/mongod.conf"
+
 # memcached
 alias mcconf="mate /opt/local/etc/LaunchDaemons/org.macports.memcached/memcached.wrapper"
 alias stopmc="sudo launchctl stop org.macports.memcached"
