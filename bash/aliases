@@ -114,6 +114,7 @@ alias glpo='git log --pretty=oneline --abbrev-commit --color'
 alias glgs='git log | git shortlog -n -s'
 alias gweb='git-instaweb -d webrick'
 alias gdel='git ls-files -z --deleted | git update-index -z --remove --stdin'
+alias branches='for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r'
 
 # apache
 alias sag='sudo apachectl graceful'
