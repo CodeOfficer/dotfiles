@@ -15,7 +15,7 @@ alias ea='mate -w ~/dotfiles/bash/aliases && reload'
 alias ee="mate ~/dotfiles/bash/env"
 
 # utility
-alias home='ssh -l codeofficer 74.65.142.185'
+alias home='ssh -l codeofficer 76.179.221.30'
 alias c='clear'
 alias ..='cd ..'
 alias ll='ls -lAGhF'
