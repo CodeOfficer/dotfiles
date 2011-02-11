@@ -92,6 +92,12 @@ function rffl {
 	# For running specific line numbers
 	cucumber features/"$1".feature:"$2"
 }
+function cuc {
+	# For running specific features.
+	bundle exec cucumber --require features "$1"
+	# rake features FEATURE=features/"$1".feature
+}
+
 
 # git aliases
 alias gb='git branch'
