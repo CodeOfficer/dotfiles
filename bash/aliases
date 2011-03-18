@@ -1,3 +1,12 @@
+function panera {
+	echo `ifconfig en1 | grep ether`
+	mac_address=`openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'`
+	sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
+	sleep 10
+	sudo ifconfig en1 ether $mac_address
+	echo `ifconfig en1 | grep ether`
+}
+
 # finder
 alias o='open . &'
 alias ff='open -a Firefox'
