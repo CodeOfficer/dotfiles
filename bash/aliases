@@ -117,8 +117,11 @@ function gc() {
 function gca() {
 	git commit -v -a -m "$*"
 }
-alias gd='git diff | mate'
-alias gdc='git diff --cached'
+
+alias gd='git difftool'
+alias gdc='git difftool --cached'
+# alias gd='git diff | mate'
+# alias gdc='git diff --cached'
 alias gl='git pull'
 alias gp='git push'
 alias gst='git status'
