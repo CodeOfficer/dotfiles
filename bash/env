@@ -18,3 +18,5 @@ export INPUTRC=~/dotfiles/inputrc
 # gems
 # export GEM_PRIVATE_KEY='~/.gem/gem-private_key.pem'
 # export GEM_CERTIFICATE_CHAIN='~/dotfiles/gem/gem-public_cert.pem'
+
+export VIM_APP_DIR='/Applications/MacVim-snapshot-57'

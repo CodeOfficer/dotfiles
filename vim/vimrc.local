@@ -1,0 +1,3 @@
+set nobackup                      " Dont' worry about backing up files
+set noswapfile
+set noexpandtab
