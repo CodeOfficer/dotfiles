@@ -4,6 +4,6 @@ set fuopt+=maxhorz                " Properly expands horizonal size in fullscree
 set guifont=Monaco:h12.00
 
 set antialias                     " MacVim: smooth fonts.
-set encoding=utf-8                " Use UTF-8 everywhere.
+set noexpandtab
 
 colorscheme vividchalk

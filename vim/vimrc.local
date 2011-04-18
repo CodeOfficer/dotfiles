@@ -1,3 +1,8 @@
+set encoding=utf-8                " Use UTF-8 everywhere.
 set nobackup                      " Dont' worry about backing up files
 set noswapfile
-set noexpandtab
+set list
+scriptencoding utf-8              "in vimrc allow utf8 chars"
+set listchars=tab:·\ ,trail:-,eol:↲
+set linespace=3
+set spell
