@@ -40,6 +40,11 @@ alias doff='defaults write com.apple.finder CreateDesktop false; killall Finder'
 cd() { builtin cd "$1"; ll; }
 pman() { man -t "${1}" | open -f -a /Applications/Preview.app; }
 
+# copy the current directory path
+function cwd { 
+	echo "cd `pwd`" | pbcopy 
+}
+
 # OPEN MULTIPLE NEW TERMINAL TABS ON OSX USING THE CURRENT WORKING DIR
 # http://snipplr.com/view/36763/open-multiple-new-terminal-tabs-on-osx-using-the-current-working-dir/
 function nt {
