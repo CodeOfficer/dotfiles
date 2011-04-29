@@ -1,4 +1,6 @@
 function panera {
+  # http://www.irongeek.com/i.php?page=security/changemac
+  # http://maymay.net/blog/2011/03/29/how-to-spoof-your-mac-address-on-mac-os-x-for-reals/
 	echo `ifconfig en1 | grep ether`
 	mac_address=`openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'`
 	sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
@@ -41,8 +43,8 @@ cd() { builtin cd "$1"; ll; }
 pman() { man -t "${1}" | open -f -a /Applications/Preview.app; }
 
 # copy the current directory path
-function cwd { 
-	echo "cd `pwd`" | pbcopy 
+function cwd {
+	echo "cd `pwd`" | pbcopy
 }
 
 # OPEN MULTIPLE NEW TERMINAL TABS ON OSX USING THE CURRENT WORKING DIR
