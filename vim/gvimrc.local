@@ -6,5 +6,6 @@ set guifont=Monaco:h12.00         " Default font
 
 set antialias                     " MacVim: smooth fonts.
 set noexpandtab                   " Stop messing with my tabs
+set cursorline                    " Highlight the current line
 
 colorscheme vividchalk

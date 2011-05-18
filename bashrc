@@ -18,3 +18,5 @@ fi
 if [[ -s `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]]; then
 	source `brew --prefix`/Library/Contributions/brew_bash_completion.sh;
 fi
+
+cd .
