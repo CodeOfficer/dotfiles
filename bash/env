@@ -2,6 +2,7 @@ export EDITOR="mate -w"
 
 # path
 export PATH=.:$PATH
+export PATH=./bin:$PATH
 export PATH=~/dotfiles/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH

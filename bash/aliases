@@ -16,6 +16,9 @@ alias ff='open -a Firefox'
 # textmate
 alias m='mate'
 
+# chrome
+alias chromedev='open ~/Applications/Google\ Chrome.app --args --disable-web-security'
+
 # rvm
 alias rvm_disk_usage="rvm disk-usage all | tail -1"
 
