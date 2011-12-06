@@ -7,17 +7,7 @@ export PATH=~/dotfiles/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-# man
-export MANPATH=/usr/local/man:$MANPATH
-
 # mysql
 export PATH=/usr/local/mysql/bin:$PATH
 
-# custom Terminal commands for readline
-export INPUTRC=~/dotfiles/inputrc
-
-# gems
-# export GEM_PRIVATE_KEY='~/.gem/gem-private_key.pem'
-# export GEM_CERTIFICATE_CHAIN='~/dotfiles/gem/gem-public_cert.pem'
-
-export VIM_APP_DIR='/Applications/MacVim-snapshot-57'
+# export VIM_APP_DIR='/Applications/MacVim-snapshot-57'

@@ -1,11 +1,11 @@
-set guioptions-=L                 " Remove left scrollbar
-set guioptions-=r                 " Remove right scrollbar
-set fu                            " Fullscreen by default
-set fuopt+=maxhorz                " Properly expands horizonal size in fullscreen mode
-set guifont=Monaco:h12.00         " Default font
-
-set antialias                     " MacVim: smooth fonts.
-set noexpandtab                   " Stop messing with my tabs
-set cursorline                    " Highlight the current line
-
-colorscheme vividchalk
+" set guioptions-=L                 " Remove left scrollbar
+" set guioptions-=r                 " Remove right scrollbar
+" set fu                            " Fullscreen by default
+" set fuopt+=maxhorz                " Properly expands horizonal size in fullscreen mode
+" set guifont=Monaco:h12.00         " Default font
+"
+" set antialias                     " MacVim: smooth fonts.
+" set noexpandtab                   " Stop messing with my tabs
+" set cursorline                    " Highlight the current line
+"
+" colorscheme vividchalk

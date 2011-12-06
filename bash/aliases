@@ -9,10 +9,6 @@ function panera {
 	echo `ifconfig en1 | grep ether`
 }
 
-# finder
-alias o='open . &'
-alias ff='open -a Firefox'
-
 # textmate
 alias m='mate'
 
@@ -22,103 +18,32 @@ alias chromedev='open ~/Applications/Google\ Chrome.app --args --disable-web-sec
 # rvm
 alias rvm_disk_usage="rvm disk-usage all | tail -1"
 
-# processes
-alias tu='top -o cpu' #cpu
-alias tm='top -o vsize' #memory
-
 # source files
 alias reload='source ~/dotfiles/bash/aliases'
-alias ea='mate -w ~/dotfiles/bash/aliases && reload'
-alias ee="mate ~/dotfiles/bash/env"
 
 # utility
 alias home='ssh -l codeofficer 76.179.221.30'
 alias c='clear'
 alias ..='cd ..'
 alias ll='ls -lAGhF'
-alias lsf='ls /private/etc | grep -E "bash|profile"'
-alias cdgems='cd $(rvm gemdir)'
 alias remsvn='find . -name .svn -print0 | xargs -0 rm -rf'
 alias remds='find . -type f -name .DS_Store | xargs rm -rf'
 alias sdf='sudo dscacheutil -flushcache'
-alias scan_for_xss="grep -R '<%=' app/views/* | grep -v '<%=h' | grep -v '.svn' | more"
 alias ram_disk='diskutil erasevolume HFS+ "ram disk" `hdiutil attach -nomount ram://4629672`'
 alias don='defaults write com.apple.finder CreateDesktop true; killall Finder'
 alias doff='defaults write com.apple.finder CreateDesktop false; killall Finder'
-cd() { builtin cd "$1"; ll; }
-pman() { man -t "${1}" | open -f -a /Applications/Preview.app; }
-
-# copy the current directory path
-function cwd {
-	echo "cd `pwd`" | pbcopy
-}
-
-# OPEN MULTIPLE NEW TERMINAL TABS ON OSX USING THE CURRENT WORKING DIR
-# http://snipplr.com/view/36763/open-multiple-new-terminal-tabs-on-osx-using-the-current-working-dir/
-function nt {
-	if [ $# -ne 1 ]; then
-		TIMES=1
-	else
-		TIMES=$1
-	fi
-
-	osascript -e "
-		repeat $TIMES times
-			tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
-			tell application \"Terminal\" to do script \"cd $PWD; clear;\" in selected tab of the front window
-		end repeat
-	" > /dev/null 2>&1
-}
 
 # rails aliases
 alias r='rails'
-
 alias ur='unicorn'
 alias tld='tail -f log/development.log'
 alias tlt='tail -f log/test.log'
 alias tlp='tail -f log/production.log'
-alias ss='script/server'
-alias ssd='script/server --debugger'
-alias ssp='script/server -e production'
-alias srvm='script/rvm'
-alias sc='script/console'
-alias scs='script/console --sandbox'
-alias sg='script/generate'
-alias sp='script/plugin'
 alias st="touch tmp/restart.txt"
 alias rr='rake routes'
-alias rdfl='rake db:fixtures:load'
-alias rdm0='rake db:migrate VERSION=0'
 alias rdm='rake db:migrate'
 alias rdr='rake db:rollback'
 alias rtf='rake db:drop && rake db:create && rake db:migrate;'
-alias rtft='RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rake db:migrate'
-alias rtfo='rake db:drop && rake db:create && rake db:migrate && rake db:fixtures:load'
-alias rtfop='rake db:drop RAILS_ENV=production && rake db:create RAILS_ENV=production && rake db:migrate RAILS_ENV=production && rake db:fixtures:load RAILS_ENV=production'
-alias rrm='railroad -o model.dot -M'
-alias rrc='railroad -o controller.dot -C'
-alias rupdate='sudo gem install rails --source=http://gems.rubyonrails.org'
-alias jug='juggernaut -c config/juggernaut.yml'
-alias jugg='./vendor/gems/juggernaut-0.5.8/bin/juggernaut -c /Users/codeofficer/work/chat-app/config/juggernaut.yml'
-railz() {
-	rails $* -m http://github.com/CodeOfficer/rails-23-templates/raw/master/basic.rb
-}
-
-# cucumber
-alias rf='rake features'
-function rff {
-	# For running specific features.
-	rake features FEATURE=features/"$1".feature
-}
-function rffl {
-	# For running specific line numbers
-	cucumber features/"$1".feature:"$2"
-}
-function cuc {
-	# For running specific features.
-	bundle exec cucumber --require features "$1"
-	# rake features FEATURE=features/"$1".feature
-}
 
 
 # git aliases
@@ -133,10 +58,7 @@ function gca() {
 
 alias gd='git difftool'
 alias gdc='git difftool --cached'
-# alias gd='git diff | mate'
-# alias gdc='git diff --cached'
-alias gl='git pull'
-alias gp='git push'
+
 alias gst='git status'
 alias ga.='git add .'
 alias grh='git reset --hard'
@@ -144,21 +66,3 @@ alias grs='git reset --soft'
 alias glpo='git log --pretty=oneline --abbrev-commit --color'
 alias glgs='git log | git shortlog -n -s'
 alias gweb='git-instaweb -d webrick'
-alias gdel='git ls-files -z --deleted | git update-index -z --remove --stdin'
-alias branches='for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r'
-
-# apache
-alias sag='sudo apachectl graceful'
-alias sph='sudo mate /opt/local/apache2/conf/httpd.conf'
-alias spv='sudo mate /opt/local/apache2/conf/extra/httpd-vhosts.conf'
-
-alias sm="mongod run --config /usr/local/Cellar/mongodb/1.6.2-x86_64/mongod.conf"
-
-# memcached
-alias mcconf="mate /opt/local/etc/LaunchDaemons/org.macports.memcached/memcached.wrapper"
-alias stopmc="sudo launchctl stop org.macports.memcached"
-alias startmc="sudo launchctl start org.macports.memcached"
-alias mcr="stopmc ; startmc"
-
-
-
