@@ -12,11 +12,6 @@ if [[ -s /Users/codeofficer/.rvm/scripts/rvm ]]; then
 	[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 fi
 
-
-if [[ -s `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]]; then
-	source `brew --prefix`/Library/Contributions/brew_bash_completion.sh;
-fi
-
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
