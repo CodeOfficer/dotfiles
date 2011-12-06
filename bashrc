@@ -17,4 +17,8 @@ if [[ -s `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]]; then
 	source `brew --prefix`/Library/Contributions/brew_bash_completion.sh;
 fi
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
 [[ $- == *i* ]]   &&   . ~/dotfiles/git-prompt/git-prompt.sh
