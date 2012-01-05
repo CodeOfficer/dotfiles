@@ -12,8 +12,8 @@ if [[ -s /Users/codeofficer/.rvm/scripts/rvm ]]; then
 	[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 fi
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+  source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
 [[ $- == *i* ]]   &&   . ~/dotfiles/git-prompt/git-prompt.sh
