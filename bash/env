@@ -1,7 +1,8 @@
-export EDITOR="mate -w"
+export EDITOR="$HOME/bin/mate -w"
 
 # path
 export PATH=.:$PATH
+export PATH=~/bin:$PATH
 export PATH=./bin:$PATH
 export PATH=~/dotfiles/bin:$PATH
 export PATH=/usr/local/bin:$PATH
