@@ -10,7 +10,7 @@
 # }
 
 # textmate
-# alias m='mate'
+alias m='mate'
 
 # chrome
 alias chromedev='open ~/Applications/Google\ Chrome.app --args --disable-web-security'
@@ -20,22 +20,22 @@ alias chromedev='open ~/Applications/Google\ Chrome.app --args --disable-web-sec
 
 # utility
 # alias home='ssh -l codeofficer 76.179.221.30'
-# alias c='clear'
+alias c='clear'
 # alias ..='cd ..'
 # alias ll='ls -lAGhF'
-# alias remsvn='find . -name .svn -print0 | xargs -0 rm -rf'
-# alias remds='find . -type f -name .DS_Store | xargs rm -rf'
-# alias sdf='sudo dscacheutil -flushcache'
-# alias ram_disk='diskutil erasevolume HFS+ "ram disk" `hdiutil attach -nomount ram://4629672`'
-# alias don='defaults write com.apple.finder CreateDesktop true; killall Finder'
-# alias doff='defaults write com.apple.finder CreateDesktop false; killall Finder'
+alias remsvn='find . -name .svn -print0 | xargs -0 rm -rf'
+alias remds='find . -type f -name .DS_Store | xargs rm -rf'
+alias sdf='sudo dscacheutil -flushcache'
+alias ram_disk='diskutil erasevolume HFS+ "ram disk" `hdiutil attach -nomount ram://4629672`'
+alias don='defaults write com.apple.finder CreateDesktop true; killall Finder'
+alias doff='defaults write com.apple.finder CreateDesktop false; killall Finder'
 
 # rails aliases
 # alias r='rails'
 # alias ur='unicorn'
-# alias tld='tail -f log/development.log'
-# alias tlt='tail -f log/test.log'
-# alias tlp='tail -f log/production.log'
+alias tld='tail -f log/development.log'
+alias tlt='tail -f log/test.log'
+alias tlp='tail -f log/production.log'
 # alias st="touch tmp/restart.txt"
 # alias rr='rake routes'
 # alias rdm='rake db:migrate'
@@ -57,9 +57,9 @@ alias chromedev='open ~/Applications/Google\ Chrome.app --args --disable-web-sec
 # alias gdc='git difftool --cached'
 #
 # alias gst='git status'
-# alias ga.='git add .'
-# alias grh='git reset --hard'
-# alias grs='git reset --soft'
-# alias glpo='git log --pretty=oneline --abbrev-commit --color'
+alias ga.='git add .'
+alias grh='git reset --hard'
+alias grs='git reset --soft'
+alias glpo='git log --pretty=oneline --abbrev-commit --color'
 # alias glgs='git log | git shortlog -n -s'
 # alias gweb='git-instaweb -d webrick'
