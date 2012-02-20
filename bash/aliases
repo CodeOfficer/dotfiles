@@ -53,8 +53,8 @@ alias tlp='tail -f log/production.log'
 #   git commit -v -a -m "$*"
 # }
 #
-# alias gd='git difftool'
-# alias gdc='git difftool --cached'
+alias gd='git difftool'
+alias gdc='git difftool --cached'
 #
 # alias gst='git status'
 alias ga.='git add .'
